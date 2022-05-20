@@ -78,7 +78,8 @@ def game(console, chosen_word):
     else:
         console.print(f"\n[green]CURDLE {len(already_guessed)}/{ALLOWED_GUESSES}[/]\n")
     console.print(*full_wordle_pattern, sep="\n")
-
+    console.print("\n ----Thanks For Playing---- \n")
+    
 
 if __name__ == '__main__':
     console = Console()
