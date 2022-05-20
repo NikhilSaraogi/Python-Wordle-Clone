@@ -1,3 +1,4 @@
+# imports
 from rich.prompt import Prompt
 from rich.console import Console
 from random import choice
@@ -14,6 +15,8 @@ PLAYER_INSTRUCTIONS = '\nYou may start Guessing\n'
 GUESS_STATEMENT = "\nEnter your guess"
 ALLOWED_GUESSES = 6
 
+# function definitions
+
 def right_place(letter):
     return f'[black on green]{letter}[/]'
 
@@ -25,7 +28,13 @@ def wrong_letter(letter):
     return f'[black on white]{letter}[/]'
 
 
+# public methods
+
 def check_guess(guess, answer):
+    """
+        checks the guess against the word and sees if each character in the guess is in the right
+        spot or is even in the word at all
+"""
     guessed = []
     pattern = []
     for i, letter in enumerate(guess):
